@@ -1,0 +1,87 @@
+body {
+    background-color :   rgb(242, 240, 241);
+    font-family: arial, "Segoe UI",  system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 800px ;
+    
+    
+  }
+
+
+  img{
+      margin-top: -500px;
+  }
+  #nom{
+    margin-left: 200px;
+  
+
+}
+
+#etudiante{
+        margin-left: 200px;
+
+
+}
+  
+  .header {
+     background-color : rgb(104, 87, 95); 
+     align-self : center;
+     color : white;
+
+  }
+  
+
+div{
+    padding : 20px  30px;
+    margin: 8px;
+    box-shadow: 10px 10px 30px black;
+}
+
+#contact{
+    background-color: rgb(242, 240, 241);
+    color : rgb(104, 87, 95);
+
+}
+
+#formations{
+    background-color: rgb(239,237,238);
+    color : rgb(104, 87, 95);
+
+}
+
+#compétences{
+    background-color: rgb(236,232,234);
+    color : rgb(104, 87, 95);
+}
+
+
+table{
+    color : rgb(104, 87, 95);
+    width: 100%;
+
+}
+
+.sections h1{
+  color : rgb(104, 87, 95);
+}
+
+.sections {
+    color : rgb(104, 87, 95);
+  }
+
+table
+{
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+}
+tr , td
+{
+    border: 1px solid rgb(104, 87, 95);
+    text-align: center; 
+
+}
+
+.logos{
+    vertical-align: -100%;
+}
+
