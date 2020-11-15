@@ -1,4 +1,9 @@
 
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
 
 function validation(){
    
@@ -20,9 +25,11 @@ function validation(){
       }
       //si champs ne depasse pas 5 caractéres
       else{
+          
         document.getElementById("error").innerHTML += `Minimum 5 caractères pour : ${label} <br/>`; 
       }
 
+      
       // afficher l'erreur
       document.getElementById("error").style.display = "block";
 
@@ -30,6 +37,14 @@ function validation(){
       document.getElementById("resultat").style.display = "none";
  
     }
+
+     if( item.value.length >=5 && item.id =="email" ){
+
+         if (! validateEmail(item.value)) {
+            document.getElementById("error").innerHTML += `E-mail non valide <br/>`; 
+   
+         }
+      }
       
   }
     if(document.getElementById("error").innerHTML == ""){
