@@ -14,7 +14,6 @@ function validation(){
   //parcourir les champs  
   for(let item of document.querySelectorAll('.input-text')){
 
-    if(item.value.length < 5){
 
       var label =   document.querySelector("label[for="+item.id+"]").textContent;
 
@@ -24,11 +23,24 @@ function validation(){
 
       }
       //si champs ne depasse pas 5 caractéres
-      else{
+      else if(item.value.length < 5){
           
+        if(item.id=="e-mail"){
+            document.getElementById("error").innerHTML += `Email non valide <br/>`; 
+        }
+        else{
         document.getElementById("error").innerHTML += `Minimum 5 caractères pour : ${label} <br/>`; 
+        }
       }
+      
+      if(item.id=="e-mail" ){
+          if(item.value.length >=5){
+             if(!validateEmail(item.value)){
+                document.getElementById("error").innerHTML += `Email non valide <br/>`; 
 
+              }
+           }
+      }
       
       // afficher l'erreur
       document.getElementById("error").style.display = "block";
@@ -36,7 +48,7 @@ function validation(){
       //cacher le message de bienvenue
       document.getElementById("resultat").style.display = "none";
  
-    }
+
       
   }
     if(document.getElementById("error").innerHTML == ""){
