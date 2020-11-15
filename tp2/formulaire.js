@@ -19,7 +19,7 @@ function validation(){
 
       // Si champs vide
       if(item.value.length == 0){
-        document.getElementById("error").innerHTML += `La saisie du ${label} est obligatoire <br/>`; 
+        document.getElementById("error").innerHTML += `La saisie de : ${label} est obligatoire <br/>`; 
 
       }
       //si champs ne depasse pas 5 caractéres
