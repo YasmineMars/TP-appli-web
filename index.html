@@ -1,57 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>🏫 Index des TP</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TP2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="formulaire.js"></script>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <!-- Place favicon.ico in the root directory -->
+    </head>
+    <body>        
+        
+        <section class ="fiche-personne">
+            <h1 class ="title"> Saisie d'une fiche <strong>personne</strong></h1>
 
-    <style>
-      body {
-        background-color: #e9ebee;
-        font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-        font-size: 16px;
-        margin: 0 auto;
-        max-width: 800px;
-      }
-    </style>
+            <div class="container">
+                <form class="form row" id="formAW"  onsubmit="validation()"> 
+                    <div class="form-field col-lg-6">
+                        <input  id="nom" class="input-text" type="text" name="" placeholder="ex: AREZKI">
+                        <label for="nom"  class="label">  Nom </label>
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
-  </head>
-  <body>
-    <h1>🏫 Page d'index des TP 🎒</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello ☀️ AZERTY 1</p>
-    <img src="galilee.png" alt="Logo Galilee" />
+                    </div>
 
-    <ul>
-      <li>
-        <a href="tp1/index.html">/TP1</a>
-      </li>
-      <li>
-        <a href="tp2/index.html">/TP2</a>
-      </li>
-      <li>
-        <a href="tp3/index.html">/TP3</a>
-      </li>
-      <li>
-        <a href="tp4/index.html">/TP4</a>
-      </li>
-      <li>
-        <a href="tp5/index.html">/TP5</a>
-      </li>
-      <li>
-        <a href="tp6/index.html">/TP6</a>
-      </li>
-      <li>
-        <a href="tp7/index.html">/TP7</a>
-      </li>
-    </ul>
-  </body>
+                    <div class="form-field col-lg-6">
+                        <input  id="prénom" class="input-text" type="text" name="" placeholder="ex: Yasmine">
+                        <label for="prénom"  class="label">  Prénom</label>
+
+                    </div>
+
+                    <div class="form-field col-lg-6">
+                        <input  id="naissance" class="input-text" type="text"  placeholder="ex: 01/10/2000" name="">
+                        <label for="naissance"  class="label">  Date de naissance</label>
+
+                    </div>
+
+                    <div class="form-field col-lg-6">
+                        <input  id="e-mail" class="input-text" type="text" name="" placeholder="aa@mail.fr">
+                        <label for="e-mail"  class="label">  E-mail</label>
+
+                    </div>
+                    <div class="form-field col-lg-12">
+                        <input  id="adresse" class="input-text" type="text" name="" placeholder="99 rue ">
+                        <label for="adresse"  class="label">  Adresse</label>
+
+                    </div>
+
+                  
+
+                    <div class="form-field col-lg-12">
+                        <input  class="submit-button" type="button" name="" value ="Valider" onclick="validation()">
+                    </div>
+           
+                </div>
+
+                <div id="error"> </div>
+                <div id="resultat"> </div>
+            </form>
+
+            
+
+        </section>
+        
+    </body>
 </html>
