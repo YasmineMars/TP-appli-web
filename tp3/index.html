@@ -10,6 +10,21 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+
+        <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+<!-- CSS boostrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<script src="js/popper.min.js"></script>
+
+<!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/form-jquery-validation.js">  </script>
+
+
+
         <style>
           body{
               background-color: #e9ebee;              
@@ -18,6 +33,11 @@
               margin: 0 auto;
               max-width: 800px;              
           }
+
+          img{
+              max-width: 100%;
+          }
+         
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
@@ -25,9 +45,61 @@
         <!--<script src="main.js"></script>-->
     </head>
     <body>        
-        <h1>tp3</h1>
+        <h1>TP AW - Formulaire V2</h1>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+
+        <div class="container">
+            <!-- Content here -->
+            <form method="POST" action="" id="form">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Nom</label>
+                  <input type="text" class="form-control" id="nom">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Prénom</label>
+                  <input type="text" class="form-control" id="prenom">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Date de naissance</label>
+                    <input type="date" class="form-control" id="naissance">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Adresse postale</label>
+                    <input type="text" class="form-control" id="addr" >
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Adresse mail</label>
+                    <input type="email" class="form-control" id="mail" placeholder="name@exemple.com">
+                  </div>
+                  <button type="submit" id="submit" class="btn btn-primary">Valider</button>
+              </form>
+          </div>
+
+
+        
+          <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class ="modal-body">Corps de la modal à modifier après validation du formulaire</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+
+          
     </body>
+
+
 </html>
